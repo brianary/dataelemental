@@ -34,25 +34,25 @@ C# has added many new keywords, syntax elements, and features since its introduc
 
 | Function pointers  | ⌨️ *delegate*  | 9.0
 
-| Generics  | _Type_**<T>** and 🧩 *System.Collections.Generic*  | 2.0
+| Generics  | _Type_**<T>** and 🏷️ *System.Collections.Generic*  | 2.0
 
-| Generics: INumber  | 🧩 *INumber<T>*  | 11.0
+| Generics: INumber  | 🏷️ *INumber<T>*  | 11.0
 
 | Global usings  | *global using* _Namespace_ ;  | 10.0
 
-| Indices and ranges  | ❇️ *^* ❇️ *..* 🧩 *System.Index* 🧩 *System.Range*  | 8.0
+| Indices and ranges  | ✨ *^* ✨ *..* 🏷️ *System.Index* 🏷️ *System.Range*  | 8.0
 
 | Initialization: Anonymous types  | *new { }*  | 3.0
 
 | Initialization: Implicitly typed local variables  | ⌨️ *var*  | 3.0
 
-| Initialization: Index initializers  | ❇️ new Dictionary< _type_ , _type_ > **{ [_value_] = _value_, }**  | 6.0
+| Initialization: Index initializers  | ✨ new Dictionary< _type_ , _type_ > **{ [_value_] = _value_, }**  | 6.0
 
 | Initialization: Index reverse | var a = new int[] { [^3] = 0, [^2] = 1, [^1] = 2, }; _// [0, 1, 2]_ | 13.0
 
 | Initialization: Initializers  | new Type *{ … }* 🔹 new CollectionType *{ item, item, item, … }*  | 3.0
 
-| Initialization: Required  | ❇️ *required* _fieldOrProperty_  | 11.0
+| Initialization: Required  | ✨ *required* _fieldOrProperty_  | 11.0
 
 | Initialization: Target typed new  | _// *new()* doesn't require a type name when inferrable_  | 9.0
 
@@ -100,7 +100,7 @@ C# has added many new keywords, syntax elements, and features since its introduc
 
 | Module initializers  | *[ModuleInitializer]* _Method_() { … }  | 9.0
 
-| Multithreading: New lock object | 🧩 *System.Threading.Lock* | 13.0
+| Multithreading: New lock object | 🏷️ *System.Threading.Lock* | 13.0
 
 | Nameof operator  | ⌨️ *nameof()*  | 6.0
 
@@ -114,25 +114,25 @@ C# has added many new keywords, syntax elements, and features since its introduc
 
 | Nesting: Using declarations  | *using var* _x_ = _disposble_; _// applies to end of scope_  | 8.0
 
-| Nulls: Null forgiving operator  | ❇️ *!*  | 8.0
+| Nulls: Null forgiving operator  | ✨ *!*  | 8.0
 
-| Nulls: Null propagator  | ❇️ x**?.**_member_ ❇️ x**?[**_expression_**]**  | 6.0
+| Nulls: Null propagator  | ✨ x**?.**_member_ ✨ x**?[**_expression_**]**  | 6.0
 
-| Nulls: Null-coalescing assignment  | ❇️ *??=*  | 8.0
+| Nulls: Null-coalescing assignment  | ✨ *??=*  | 8.0
 
-| Nulls: Nullable types  | 🧩 *Nullable<T>* ❇️ _Type_**?**  | 2.0
+| Nulls: Nullable types  | 🏷️ *Nullable<T>* ✨ _Type_**?**  | 2.0
 
 | Nulls: Nullable types: Reference types
 | _// reference types may not be null without *?*, and require null-checking with it_
 | 8.0
 
-| Operators: Checked/unchecked  | ❇️ *checked* _or_ *unchecked*  | 11.0
+| Operators: Checked/unchecked  | ✨ *checked* _or_ *unchecked*  | 11.0
 
 | Parameters: Caller info attributes
-| 🧩 *CallerFilePathAttribute* 🧩 *CallerLineNumberAttribute* 🧩 *CallerMemberNameAttribute*
+| 🏷️ *CallerFilePathAttribute* 🏷️ *CallerLineNumberAttribute* 🏷️ *CallerMemberNameAttribute*
 | 5.0
 
-| Parameters: Caller info attributes: Expression  | 🧩 *CallerArgumentExpressionAttribute*  | 10.0
+| Parameters: Caller info attributes: Expression  | 🏷️ *CallerArgumentExpressionAttribute*  | 10.0
 
 | Parameters: In parameters  | ⌨️ *in*  | 7.2
 
@@ -200,22 +200,22 @@ C# has added many new keywords, syntax elements, and features since its introduc
 
 | Static lambdas and anonymous funcions  | _// lambdas and anonymous functions may be **static**_  | 9.0
 
-| String interpolation  | ❇️ $"…{expression}…"  | 6.0
+| String interpolation  | ✨ $"…{expression}…"  | 6.0
 
 | String interpolation: Braces  | $$""{"value": "{{value}}"}"" _// multiple $ add extra { } for interpolation_
 | 11.0
 
 | String interpolation: Const  | const string name = $"…{constantexpr}…";  | 10.0
 
-| String interpolation: Custom handler  | 🧩 *InterpolatedStringHandlerAttribute*  | 10.0
+| String interpolation: Custom handler  | 🏷️ *InterpolatedStringHandlerAttribute*  | 10.0
 
 | String interpolation: Newlines  | _// newlines allowed within interpolation expressions_  | 11.0
 
-| String interpolation: Verbatim enhancement | ❇️ @$"…" (previously only $@"…" worked)  | 8.0
+| String interpolation: Verbatim enhancement | ✨ @$"…" (previously only $@"…" worked)  | 8.0
 
 | Struct initializers  | _Property_ { get; init; } = _value_ ; | 10.0
 
-| Suppress emitting localsinit  | 🧩 *SkipLocalsInitAttribute*  | 9.0
+| Suppress emitting localsinit  | 🏷️ *SkipLocalsInitAttribute*  | 9.0
 
 | Tuples: Deconstruction  | (_type_, …) _x_ = (_value_, …); _// or with (_type **PropertyName**_, …)  | 7.0
 
@@ -233,6 +233,12 @@ C# has added many new keywords, syntax elements, and features since its introduc
 
 |===
 
+== Legend
+
+* ⌨️ new keyword
+* ✨ new syntax
+* 🏷️ new type
+
 == Sources
 
 * link:https://en.wikipedia.org/wiki/C_Sharp_(programming_language)#Versions[C## Versions]
@@ -241,3 +247,4 @@ C# has added many new keywords, syntax elements, and features since its introduc
 * https://learn.microsoft.com/dotnet/csharp/whats-new/csharp-11[What's new in C# 11]
 * https://learn.microsoft.com/dotnet/csharp/whats-new/csharp-12[What's new in C# 12]
 * https://learn.microsoft.com/dotnet/csharp/whats-new/csharp-13[What's new in C# 13]
+* https://learn.microsoft.com/dotnet/csharp/whats-new/csharp-14[What's new in C# 14]
