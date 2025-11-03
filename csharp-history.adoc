@@ -30,7 +30,9 @@ C# has added many new keywords, syntax elements, and features since its introduc
 | _// constructors, finalizers, indexers, and all properties now supported_
 | 7.0
 
-| Extension methods  | _Method_(*this* _Type param_)  | 3.0
+| Extension: Blocks | ⌨️ *extension*(_TypeName_) { } | 14.0
+
+| Extension: Methods  | _Method_(*this* _Type param_)  | 3.0
 
 | Function pointers  | ⌨️ *delegate*  | 9.0
 
@@ -74,6 +76,8 @@ C# has added many new keywords, syntax elements, and features since its introduc
 
 | Lambda expressions: Param defaults | (int index = 1) => arrayValues[index] | 12.0
 
+| Lambda expressions: Param modifiers | _// Untyped params can be scoped, ref, in, out, or ref readonly_ | 14.0
+
 | Lambda expressions: Return type  | var _name_ = *__returntype__* _params_ => _expression_ ;  | 10.0
 
 | Literals: Binary literals  | **0b**__10011__  | 7.0
@@ -102,7 +106,9 @@ C# has added many new keywords, syntax elements, and features since its introduc
 
 | Multithreading: New lock object | 🏷️ *System.Threading.Lock* | 13.0
 
-| Nameof operator  | ⌨️ *nameof()*  | 6.0
+| Nameof operator | ⌨️ *nameof()*  | 6.0
+
+| Nameof operator: Generics | nameof(_GenericType_<T>) | 14.0
 
 | Native sized integers  | ⌨️ *nint* _// System.IntPtr_ ⌨️ *nuint* _// System.UIntPtr_  | 9.0
 
@@ -120,6 +126,8 @@ C# has added many new keywords, syntax elements, and features since its introduc
 
 | Nulls: Null-coalescing assignment  | ✨ *??=*  | 8.0
 
+| Nulls: Null-conditional assignment | _object_.?_property = _value_ 🔹 _object_?[_index_] = _value_ | 14.0
+
 | Nulls: Nullable types  | 🏷️ *Nullable<T>* ✨ _Type_**?**  | 2.0
 
 | Nulls: Nullable types: Reference types
@@ -127,6 +135,8 @@ C# has added many new keywords, syntax elements, and features since its introduc
 | 8.0
 
 | Operators: Checked/unchecked  | ✨ *checked* _or_ *unchecked*  | 11.0
+
+| Operators: Compound assignment | void operator++() { } 🔹 void operator+=(_type_ other) { } 🔹 … | 14.0
 
 | Parameters: Caller info attributes
 | 🏷️ *CallerFilePathAttribute* 🏷️ *CallerLineNumberAttribute* 🏷️ *CallerMemberNameAttribute*
@@ -150,7 +160,11 @@ C# has added many new keywords, syntax elements, and features since its introduc
 
 | Partial classes  | ⌨️ *partial class* ⌨️ *partial interface* ⌨️ *partial struct*  | 2.0
 
-| Partial Methods  | ⌨️ *partial* _type_ _Method_( … );  | 3.0
+| Partial constructors  | public partial _TypeName_(); | 14.0
+
+| Partial events  | public partial event _EventHandler?_ _OnEvent_; | 14.0
+
+| Partial methods  | ⌨️ *partial* _TypeName_ _Method_( … );  | 3.0
 
 | Pattern matching
 | _expression_ is _**pattern**_ _// or **is not**_ 🔹 switch(_expression_) { case _**pattern**_: … }
@@ -183,6 +197,8 @@ C# has added many new keywords, syntax elements, and features since its introduc
 | Properties: Auto properties  | _Property_ *{ get; set; }*  | 3.0
 
 | Properties: Auto properties: Initializers  | _Property_ { get; set; } *= value;*  | 6.0
+
+| Properties: Field | ⌨️ public _type_ _PropertyName_ { get; set => *field* = value; } | 14.0
 
 | Properties: Init only setters  | _Property_ { get; *init*; }  | 9.0
 
