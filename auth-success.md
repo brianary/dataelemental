@@ -1,4 +1,0 @@
-🔓 Success
-==========
-
-Authentication succeeded!
